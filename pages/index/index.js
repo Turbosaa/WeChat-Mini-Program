@@ -11,6 +11,8 @@ Page({
         randomNum2: Math.random().toFixed(2),
         count1: 0,
         count2: 0,
+        msg: '你好，',
+        type: 1
     },
 
     // 定义按钮的事件处理函数
@@ -31,6 +33,15 @@ Page({
             // dataset是一个对象，包含了所有通过data-*传递过来的参数项
             // 通过dataset可以访问到具体参数的值
             count2: this.data.count2 + e.target.dataset.info
+        })
+    },
+
+    // input输入框的事件处理函数
+    inputHandler(e) {
+        // e.detail.value是变化过后，文本框最新的值
+        // console.log(e.detail.value);
+        this.setData({
+            msg: e.detail.value
         })
     },
 

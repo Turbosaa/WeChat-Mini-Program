@@ -13,3 +13,9 @@
 <view style="text-align: center;">{{ count2 }}</view>
 <!-- bindtap="countChange2(2)"是不合法的 -->
 <button type="primary" bindtap="countChange2" data-info="{{ 2 }}">+2</button>
+<input value="{{ msg }}" type="text" bindinput="inputHandler"/>
+
+<!-- 条件渲染 -->
+<view wx:if="{{ type === 1 }}">男</view>
+<view wx:elif="{{ type === 2 }}">女</view>
+<view wx:else>保密</view>
