@@ -1,0 +1,15 @@
+<!-- index.wxml -->
+<view>{{ info }}</view>
+
+<image src="{{ imgSrc }}" mode="heightFix"/>
+
+<view>{{ randomNum1 >= 5 ? '数字大于等于5' : '数字小于5' }}</view>
+<view>{{ randomNum2 * 100 }}</view>
+
+<!-- 事件绑定 -->
+<button type="primary" bindtap="btnTapHandler">按钮</button>
+<view style="text-align: center;">{{ count1 }}</view>
+<button type="primary" bindtap="countChange1">+1</button>
+<view style="text-align: center;">{{ count2 }}</view>
+<!-- bindtap="countChange2(2)"是不合法的 -->
+<button type="primary" bindtap="countChange2" data-info="{{ 2 }}">+2</button>
