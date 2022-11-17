@@ -12,7 +12,9 @@ Page({
         count1: 0,
         count2: 0,
         msg: '你好，',
-        type: 1
+        type: 1,
+        flag: true,
+        arr1: ['A', 'B', 'C']
     },
 
     // 定义按钮的事件处理函数
