@@ -14,7 +14,12 @@ Page({
         msg: '你好，',
         type: 1,
         flag: true,
-        arr1: ['A', 'B', 'C']
+        arr1: ['A', 'B', 'C'],
+        userList: [
+            {id: 1, name: '小红'},
+            {id: 2, name: '小黄'},
+            {id: 3, name: '小蓝'}
+        ]
     },
 
     // 定义按钮的事件处理函数

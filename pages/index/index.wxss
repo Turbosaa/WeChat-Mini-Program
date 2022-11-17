@@ -1,4 +1,6 @@
 /* index.wxss */
+@import "/common/common.wxss";
+
 input {
     border: 1px solid #eee;
     margin: 10px;
