@@ -1,14 +1,35 @@
 {
     "pages": [
+        "pages/home/home",
+        "pages/message/message",
+        "pages/contact/contact",
         "pages/index/index",
         "pages/list/list",
         "pages/logs/logs"
     ],
     "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "Weixin",
-        "navigationBarTextStyle": "black"
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#2b4b6b",
+        "navigationBarTitleText": "酷炫小程序",
+        "navigationBarTextStyle": "white",
+        "backgroundColor": "#efefef",
+        "onReachBottomDistance": 100
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/home/home",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/message/message",
+                "text": "消息"
+            },
+            {
+                "pagePath": "pages/contact/contact",
+                "text": "联系我们"
+            }
+        ]
     },
     "style": "v2",
     "sitemapLocation": "sitemap.json"
