@@ -4,8 +4,7 @@
         "pages/message/message",
         "pages/contact/contact",
         "pages/index/index",
-        "pages/list/list",
-        "pages/logs/logs"
+        "pages/list/list"
     ],
     "window": {
         "backgroundTextStyle": "dark",
