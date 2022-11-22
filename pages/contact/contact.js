@@ -5,14 +5,27 @@ Page({
      * 页面的初始数据
      */
     data: {
+        colorList: [] // 随机颜色的列表
+    },
 
+    getColors() { // 获取随机颜色的方法
+        wx.request({ // 发起请求，获取随机颜色值的数组
+            url: 'https://www.escook.cn/api/color',
+            method: 'GET',
+            success: ({ data: res }) => {
+                this.setData({
+                    colorList: [...this.data.colorList, ...res.data] // 将获取的新数组和原数组通过展开运算符进行拼接
+                });
+                console.log(this.data.colorList);
+            }
+        })
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+        this.getColors();
     },
 
     /**

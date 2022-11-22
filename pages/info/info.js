@@ -1,24 +1,27 @@
-// pages/message/message.js
+// pages/info/info.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        count: 0
+        // 导航传递过来的参数对象
+        query: {}
     },
 
-    addCount(){
-        this.setData({
-            count: this.data.count + 1
-        });
+    goBack() {
+        wx.navigateBack();
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+        // options就是导航传递过来的参数对象
+        console.log(options);
+        this.setData({
+            query: options
+        })
     },
 
     /**
@@ -53,12 +56,7 @@ Page({
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh() {
-        // console.log('触发了message页面的下拉刷新事件');
-        this.setData({
-            count: 0
-        });
-        // 当数据重置成功之后，调用此函数，关闭下拉刷新的效果
-        wx.stopPullDownRefresh();
+
     },
 
     /**

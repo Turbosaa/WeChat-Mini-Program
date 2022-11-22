@@ -3,6 +3,7 @@
         "pages/home/home",
         "pages/message/message",
         "pages/contact/contact",
+        "pages/info/info",
         "pages/index/index",
         "pages/list/list"
     ],
