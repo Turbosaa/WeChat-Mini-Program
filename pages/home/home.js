@@ -8,11 +8,42 @@ Page({
 
     },
 
+    // 发起GET数据请求
+    getInfo() {
+        wx.request({
+            url: 'https://www.escook.cn/api/get', // 请求接口的地址，必须基于https协议
+            method: 'GET', // 请求的方式
+            data: { // 发送到服务器的数据
+                name: 'zs',
+                age: 20
+            },
+            success: (res) => { // 请求成功后的回调函数
+                console.log(res.data)
+            }
+        })
+    },
+
+    // 发起POST数据请求
+    postInfo() {
+        wx.request({
+            url: 'https://www.escook.cn/api/post', // 请求接口的地址，必须基于https协议
+            method: 'POST', // 请求的方式
+            data: { // 发送到服务器的数据
+                name: 'ls',
+                age: 21
+            },
+            success: (res) => { // 请求成功后的回调函数
+                console.log(res.data)
+            }
+        })
+    },
+
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+        this.getInfo();
+        this.postInfo();
     },
 
     /**
