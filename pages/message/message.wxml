@@ -2,3 +2,12 @@
 <text>pages/message/message.wxml</text>
 <view>conut的值是： {{ count }}</view>
 <button bindtap="addCount">+1</button>
+<view>{{ m1.toUpper(userName) }}</view>
+<view>{{ m2.toLower(country) }}</view>
+<wxs module="m1">
+    // 将字符串转为大写形式
+    module.exports.toUpper = function(str) {
+        return str.toUpperCase();
+    }
+</wxs>
+<wxs src="../../utils/tool.wxs" module="m2"/>

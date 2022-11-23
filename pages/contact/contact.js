@@ -5,10 +5,18 @@ Page({
      * 页面的初始数据
      */
     data: {
-        colorList: [] // 随机颜色的列表
+        colorList: [], // 随机颜色的列表
+        isLoading: false // 定义节流阀
     },
 
     getColors() { // 获取随机颜色的方法
+        this.setData({
+            isLoading: true
+        });
+        // 展示loading效果
+        wx.showLoading({
+          title: '数据加载中',
+        });
         wx.request({ // 发起请求，获取随机颜色值的数组
             url: 'https://www.escook.cn/api/color',
             method: 'GET',
@@ -16,7 +24,13 @@ Page({
                 this.setData({
                     colorList: [...this.data.colorList, ...res.data] // 将获取的新数组和原数组通过展开运算符进行拼接
                 });
-                console.log(this.data.colorList);
+            },
+            complete: () => {
+                // 隐藏loading效果
+                wx.hideLoading();
+                this.setData({
+                    isLoading: false
+                })
             }
         })
     },
@@ -67,7 +81,7 @@ Page({
      * 页面上拉触底事件的处理函数
      */
     onReachBottom() {
-
+        if(!this.data.isLoading) this.getColors();
     },
 
     /**
