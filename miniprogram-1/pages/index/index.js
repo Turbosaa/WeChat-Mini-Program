@@ -16,9 +16,9 @@ Page({
         flag: true,
         arr1: ['A', 'B', 'C'],
         userList: [
-            {id: 1, name: '小红'},
-            {id: 2, name: '小黄'},
-            {id: 3, name: '小蓝'}
+            { id: 1,name: '小红' },
+            { id: 2,name: '小黄' },
+            { id: 3,name: '小蓝' }
         ]
     },
 
@@ -28,19 +28,19 @@ Page({
     },
 
     // +1按钮的事件处理函数
-    countChange1(){
+    countChange1() {
         this.setData({
             count1: this.data.count1 + 1
-        })
+        });
     },
 
     // +2按钮的事件处理函数
-    countChange2(e){
+    countChange2(e) {
         this.setData({
             // dataset是一个对象，包含了所有通过data-*传递过来的参数项
             // 通过dataset可以访问到具体参数的值
             count2: this.data.count2 + e.target.dataset.info
-        })
+        });
     },
 
     // input输入框的事件处理函数
@@ -49,7 +49,7 @@ Page({
         // console.log(e.detail.value);
         this.setData({
             msg: e.detail.value
-        })
+        });
     },
 
     /**

@@ -21,7 +21,7 @@ Page({
         console.log(options);
         this.setData({
             query: options
-        })
+        });
     },
 
     /**

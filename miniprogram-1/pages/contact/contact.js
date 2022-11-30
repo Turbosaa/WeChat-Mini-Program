@@ -15,7 +15,7 @@ Page({
         });
         // 展示loading效果
         wx.showLoading({
-          title: '数据加载中',
+            title: '数据加载中'
         });
         wx.request({ // 发起请求，获取随机颜色值的数组
             url: 'https://www.escook.cn/api/color',
@@ -30,9 +30,9 @@ Page({
                 wx.hideLoading();
                 this.setData({
                     isLoading: false
-                })
+                });
             }
-        })
+        });
     },
 
     /**
@@ -81,7 +81,7 @@ Page({
      * 页面上拉触底事件的处理函数
      */
     onReachBottom() {
-        if(!this.data.isLoading) this.getColors();
+        if (!this.data.isLoading) this.getColors();
     },
 
     /**

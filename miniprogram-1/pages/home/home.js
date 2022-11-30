@@ -18,9 +18,9 @@ Page({
                 age: 20
             },
             success: (res) => { // 请求成功后的回调函数
-                console.log(res.data)
+                console.log(res.data);
             }
-        })
+        });
     },
 
     // 发起POST数据请求
@@ -33,27 +33,27 @@ Page({
                 age: 21
             },
             success: (res) => { // 请求成功后的回调函数
-                console.log(res.data)
+                console.log(res.data);
             }
-        })
+        });
     },
 
     goToMessage() {
         wx.switchTab({
-        url: '/pages/message/message',
-        })
+            url: '/pages/message/message',
+        });
     },
 
     goToInfo() {
         wx.navigateTo({
-        url: '/pages/info/info',
-        })
+            url: '/pages/info/info',
+        });
     },
 
     goToInfo1() {
         wx.navigateTo({
-        url: '/pages/info/info?name=ls&gender=男',
-        })
+            url: '/pages/info/info?name=ls&gender=男',
+        });
     },
 
     /**
