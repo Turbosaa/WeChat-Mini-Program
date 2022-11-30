@@ -5,3 +5,7 @@ function toLower(str) {
 module.exports = {
     toLower: toLower
 }
+
+// module.exports.toLower = function(str) {
+//     return str.toLowerCase();
+// }
