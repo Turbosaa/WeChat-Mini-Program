@@ -20,7 +20,7 @@ Page({
         wx.request({ // 发起请求，获取随机颜色值的数组
             url: 'https://www.escook.cn/api/color',
             method: 'GET',
-            success: ({ data: res }) => {
+            success: ({data: res}) => {
                 this.setData({
                     colorList: [...this.data.colorList, ...res.data] // 将获取的新数组和原数组通过展开运算符进行拼接
                 });
